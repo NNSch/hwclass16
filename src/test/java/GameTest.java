@@ -31,6 +31,7 @@ public class GameTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void testGameDraw() {
         Player mars = new Player(5, "Марс", 150);
@@ -45,6 +46,7 @@ public class GameTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void testNotRegisteredExceptionFirstPlayer() {
         Player mars = new Player(5, "Марс", 150);
@@ -56,6 +58,7 @@ public class GameTest {
 
         Assertions.assertThrows(NotRegisteredException.class, () -> game.round("Луна", "Сириус"));
     }
+
     @Test
     public void testNotRegisteredExceptionSecondPlayer() {
         Player mars = new Player(5, "Марс", 150);
@@ -67,6 +70,7 @@ public class GameTest {
 
         Assertions.assertThrows(NotRegisteredException.class, () -> game.round("Марс", "Луна"));
     }
+
     @Test
     public void testNotRegisteredExceptionTwoPlayers() {
         Player mars = new Player(5, "Марс", 150);
